@@ -1,0 +1,349 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box; }
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre,
+form, fieldset, legend, button, input, textarea,
+th, td {
+  margin: 0;
+  padding: 0; }
+
+/** 设置默认字体 **/
+body,
+button, input, select, textarea {
+  font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+address, cite, dfn, em, var {
+  font-style: normal; }
+
+/* 将斜体扶正 */
+code, kbd, pre, samp {
+  font-family: courier new, courier, monospace; }
+
+/* 统一等宽字体 */
+small {
+  font-size: 12px; }
+
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+/** 重置列表元素 **/
+ul, ol {
+  list-style: none; }
+
+/** 重置文本格式元素 **/
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+/** 重置表单元素 **/
+legend {
+  color: #000; }
+
+/* for ie6 */
+fieldset, img {
+  border: 0; }
+
+/* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea {
+  font-size: 100%; }
+
+/* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+/** 重置表格元素 **/
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 62.5%; }
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 75% !important;
+    /* 12÷16=75% */ } }
+
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 87.890625% !important;
+    /* 14.0625÷16=% */ } }
+
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 97.03% !important;
+    /* 15.525÷16=% */ } }
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 112.5% !important;
+    /* 18÷16=% */ } }
+
+@media only screen and (min-width: 560px) {
+  html {
+    font-size: 131.25% !important;
+    /* 21÷16=% */ } }
+
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 150% !important;
+    /* 24÷16=% */ } }
+
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 168.75% !important;
+    /* 27÷16=% */ } }
+
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 175.78125% !important;
+    /* 28.125÷16=% */ } }
+
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 187.5% !important;
+    /* 30÷16=% */ } }
+
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 225% !important;
+    /* 36÷16=% */ } }
+
+html,
+body,
+.container {
+  width: 100%;
+  height: 100%;
+  background: #f6f6f6;
+  font-family: 'helvetica neue', tahoma, arial, 'hiragino sans gb', 'microsoft yahei', 'Simsun', sans-serif;
+  -webkit-overflow-scrolling: touch; }
+
+.pay {
+  width: 90%;
+  margin: 0 auto; }
+
+.top {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+
+.line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9; }
+
+.pic {
+  padding: 0 5px;
+  background: #f6f6f6 url(/images/w0.png) no-repeat center center;
+  z-index: 1;
+  width: 111px;
+  height: 32px; }
+
+.wrap {
+  width: 100%; }
+  .wrap .mobile_wrap {
+    width: 100%;
+    background: #f6f6f6; }
+    .wrap .mobile_wrap .repay_mobile {
+      display: none;
+      font-size: 24px;
+      text-align: center;
+      padding: 1rem 0; }
+      .wrap .mobile_wrap .repay_mobile a {
+        color: #00af41; }
+    .wrap .mobile_wrap .price {
+      font-size: 4rem;
+      text-align: center;
+      margin-bottom: 10px; }
+    .wrap .mobile_wrap .paybtn {
+      border-radius: 8px;
+      margin: 0 auto;
+      margin-bottom:15px;
+      width: 80%;
+      height: 60px;
+      line-height: 60px;
+      color: #fff;
+      font-size: 24px;
+      background: #01a5e1;
+      text-align: center; }
+      .wrap .mobile_wrap .paybtn a {
+        color: #fff; }
+    .wrap .mobile_wrap img {
+      margin: 0 auto;
+      display: block; }
+    .wrap .mobile_wrap .paybtn2 {
+      margin: 0 auto;
+      border-radius: 8px;
+      height: 50px;
+      line-height: 50px;
+      color: #fff;
+      font-size: 20px;
+      background: #00af41;
+      text-align: center;
+      display: block; }
+  .wrap .bg {
+    display: none; }
+  .wrap .scan {
+    width: 100%;
+    background: #f6f6f6; }
+    .wrap .scan > p {
+      text-align: center;
+      width: 300px;
+      margin: 0 auto;
+      height: 70px;
+      line-height: 70px;
+      font-size: 20px;
+      color: #4a4a4a; }
+    .wrap .scan .code {
+      margin: 0 auto;
+      width: 300px;
+      height: 300px;
+      position: relative;
+      background: url(/images/w3.png) no-repeat;
+      background-size: contain;
+      padding: 8px;
+      position: relative; }
+      .wrap .scan .code canvas {
+        width: 284px;
+        height: 284px; }
+      .wrap .scan .code .w_icon {
+        width: 48px;
+        height: 48px;
+        background: #fff url(/images/w1.png);
+        position: absolute;
+        margin: auto;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0; }
+    .wrap .scan .timeout {
+      margin: 0 auto;
+      width: 300px;
+      height: 300px;
+      position: relative;
+      background: url(/images/timeout.png) no-repeat;
+      background-size: contain;
+      padding: 8px;
+      position: relative; }
+      .wrap .scan .timeout img {
+        width: 282px;
+        height: 282px; }
+    .wrap .scan .timer {
+      margin: 0 auto;
+      width: 300px;
+      height: 66px;
+      line-height: 66px; }
+      .wrap .scan .timer span:nth-child(odd) {
+        color: #00af41; }
+      .wrap .scan .timer span:nth-child(even) {
+        font-size: 14px; }
+    .wrap .scan .tips {
+      font-size: 1.3em;
+      font-weight: bolder;
+      text-align: center;
+      font-family: "微软雅黑", "Ubuntu Mono";
+      color: #333; }
+    .wrap .scan #codeExpireTime {
+      color: #2bc92f;
+      margin: 20px 0; }
+
+.bottom {
+  width: 100%; }
+  .bottom .border-bottom {
+    width: 100%;
+    height: 36px;
+    border-bottom: 1px dashed #d9d9d9; }
+  .bottom .info {
+    width: 100%;
+    font-size: 16px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center; }
+
+.repay {
+  margin: 0 auto;
+  width: 300px;
+  height: 66px;
+  line-height: 66px;
+  text-align: center;
+  font-size: 16px; }
+  .repay a {
+    color: #00af41; }
+
+.messagebox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background: rgba(255, 252, 255, 0.8); }
+  .messagebox p {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    background: #00af41;
+    border-radius: 10px;
+    line-height: 50px;
+    color: #fff; }
+
+.zhifubao .pic {
+  padding: 0 5px;
+  background: #f6f6f6 url(/images/z0.png) no-repeat center center;
+  z-index: 1;
+  width: 101px;
+  height: 32px; }
+
+.zhifubao .wrap .mobile_wrap {
+  width: 100%;
+  background: #f6f6f6; }
+  .zhifubao .wrap .mobile_wrap .repay_mobile a {
+    color: #01a5e1; }
+
+.zhifubao .wrap .bg {
+  background: #01a5e1; }
+
+.zhifubao .wrap .scan .code {
+  background: url(/images/z3.png) no-repeat; }
+  .zhifubao .wrap .scan .code img {
+    width: 282px;
+    height: 282px; }
+  .zhifubao .wrap .scan .code .w_icon {
+    background: #fff url(/images/z1.png); }
+
+.zhifubao .wrap .scan .timer span:nth-child(odd) {
+  color: #01a5e1; }
+
+.zhifubao .wrap .scan .tips {
+  font-size: 1.3em;
+  font-weight: bolder;
+  text-align: center;
+  font-family: "微软雅黑", "Ubuntu Mono";
+  color: #333; }
+
+.zhifubao .wrap .scan #codeExpireTime {
+  color: #2bc92f;
+  margin: 20px 0; }
+
+.zhifubao .repay a {
+  color: #01a5e1; }
+
+.zhifubao .messagebox p {
+  background: #01a5e1; }
